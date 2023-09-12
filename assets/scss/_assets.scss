@@ -1,0 +1,71 @@
+@import "_color.scss";
+.info__subtitle {
+    color: $gray;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.navbar__telbtn {
+    padding: 15px 20px;
+    text-decoration: none;
+    background-color: $burg;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border: 0px none;
+    outline: 0px none;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.outline__btn {
+    padding: 13px 18px;
+    background: transparent;
+    border: 2px solid $burg;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $burg;
+        color: #fff;
+    }
+}
+.input {
+    padding: 15px 16px;
+    width: 271px;
+    border: 0px none;
+    outline: 0px none;
+    opacity: 0.9;
+    font-size: 14px;
+    color: #5f5f5f;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    &:focus {
+        opacity: 1;
+    }
+}
+.title__item {
+    display: flex;
+    align-items: center;
+    hr {
+        width: 8px;
+        height: 48px;
+        background-color: $burg;
+        border-radius: 2px;
+    }
+    h1 {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+}
+.bold__text {
+    font-weight: 600;
+}

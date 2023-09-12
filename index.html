@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>УЦ “Профи” - Центр обучения защитному вождению</title>
+    <link rel="stylesheet" href="./assets/scss/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./assets/js/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/js/slick/slick.css">
+    <style>
+        /* Стили для активной вкладки */
+        .tab-header__item.active {
+            color: red;
+            border-bottom: none;
+            position: relative;
+            background-color: #fff;
+        }
+
+        /* Стиль для списка контейнеров с содержимым вкладок */
+        .tab-content {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Стили для контейнера с содержимым вкладки. По умолчанию скрыт. */
+        .tab-content__item {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: -1px;
+        }
+
+        /* Стили для активного контейнера вкладки */
+        .tab-content__item.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modalbox__success">
+        <div class="container">
+            <div class="modalbox__content">
+                <div class="modalbox__img">
+                    <img src="./assets/img/success.svg" alt="success">
+                </div>
+                <div class="modalbox__intro">
+                    <h1>
+                        Ваша заявка успешно отправлена!<br>
+                        Наш менеджер скоро свяжется с Вами
+                    </h1>
+                    <button class="navbar__telbtn modal__success-close">ОК!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modalbox__tel">
+        <div class="container">
+            <div class="modalbox__tel-wrapper">
+                <div class="modalbox__tel-content">
+                    <button class="modalboxtel__close modalbox__close-btn">
+                        <img src="./assets/img/icons/close.svg" alt="close">
+                    </button>
+                    <div class="modalbox__tel-intro">
+                        <h1>Перезвоните мне</h1>
+                    </div>
+                    <div class="modalbox__tel-form">
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="tel" placeholder="Ваш телефон">
+                        <button type="submit" class="navbar__telbtn modalget__contact">Заказать звонок</button>
+                        <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a target="_blank"
+                                href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">персональных
+                                данных</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modalbox__comment">
+        <div class="container">
+            <div class="modalbox__comment-wrapper">
+                <div class="modalbox__comment-content">
+                    <button class="modalbox__comment-close modalbox__close-btn">
+                        <img src="./assets/img/icons/close.svg" alt="close">
+                    </button>
+                    <div class="modalbox__comment-intro">
+                        <h1>Задать вопрос</h1>
+                    </div>
+                    <div class="modalbox__comment-form">
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="tel" placeholder="Ваш телефон">
+                        <textarea class="modalbox__comment-item" name="modalbox__comment" id="modalbox__comment" cols="10" rows="5" placeholder="Вопрос"></textarea>
+                        <button type="submit" class="navbar__telbtn modalget__comment">Заказать звонок</button>
+                        <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a target="_blank"
+                                href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">персональных
+                                данных</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <section class="navbar">
+            <div class="container">
+                <div class="navbar__content">
+                    <div class="navbar__logo">
+                        <a href="./index.html"><img src="./assets/img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="navbar__links">
+                        <div class="navbar__social">
+                            <p class="info__subtitle">Мы онлайн:</p>
+                            <div class="navbar__social-img">
+                                <a href="#"><img src="./assets/img/icons/telegram.svg" alt="telegram"></a>
+                                <a href="#"><img src="./assets/img/icons/whatsapp.svg" alt="whatsapp"></a>
+                                <a href="#"><img src="./assets/img/icons/viber.svg" alt="viber"></a>
+                            </div>
+                        </div>
+                        <div class="navbar__tel">
+                            <p class="info__subtitle">Звонок бесплатный:</p>
+                            <div class="navbar__tel-item">
+                                <img src="./assets/img/icons/phone.svg" alt="phone">
+                                <a href="tel:78007002816">+7 800 700 28 16</a>
+                            </div>
+                        </div>
+                        <div class="navbar__telform">
+                            <a href="#" class="navbar__telbtn navbar__telget">Перезвоните мне</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dn__navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Сертификат</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Лицензии</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Вопрос-ответ</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="info">
+            <div class="container">
+                <div class="info__content">
+                    <div class="info__intro">
+                        <h1>
+                            <span>Обучение защитному и зимнему
+                                вождению по всей России.</span>
+                            Сертификат допуска на объекты
+                            ПАО «НК Роснефть»!
+                        </h1>
+                        <div class="info__intro-subtitle">
+                            <div class="info__subtitle-item">
+                                <img src="./assets/img/icons/sertificate.svg" alt="sertificate">
+                                <p>Сертификат в день обращения</p>
+                            </div>
+                            <div class="info__subtitle-item">
+                                <img src="./assets/img/icons/planet.svg" alt="planet">
+                                <p>Международная аккредитация RoSPA</p>
+                            </div>
+                            <div class="info__subtitle-item">
+                                <img src="./assets/img/icons/study.svg" alt="study">
+                                <p>Обучение очно и онлайн</p>
+                            </div>
+                            <div class="info__subtitle-item">
+                                <img src="./assets/img/icons/people.svg" alt="people">
+                                <p>Обучаем с 2005 года, любим и знаем своё дело</p>
+                            </div>
+                        </div>
+                        <div class="info__intro-btn">
+                            <a href="#" class="navbar__telbtn navbar__telget">Записаться на обучение</a>
+                            <a href="#" class="outline__btn give__comment">Задать вопрос</a>
+                        </div>
+                    </div>
+                    <div class="info__img">
+                        <img src="./assets/img/Photo.png" alt="photo">
+                        <div class="info__img-subtitle">
+                            <p>Генеральный директор УЦ Профи</p>
+                            <h1>Айрат Нуркаев</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="driving">
+            <div class="container">
+                <div class="driving__content">
+                    <div class="driving__intro title__item">
+                        <hr>
+                        <h1>Обучение защитному и зимнему вождению</h1>
+                    </div>
+                    <div class="driving__content">
+                        <div class="driving__tabs">
+                            <ul class="driving__tab-head">
+                                <h3 class="driving__tab-header__item js-tab-trigger active driving__padding"
+                                    data-tab="1">
+                                    <br>
+                                    Защитное
+                                    вождение <br>
+                                </h3>
+                                <h3 class="driving__tab-header__item js-tab-trigger" data-tab="2">Специализированное
+                                    обучение
+                                    зимнему вождению</h3>
+                                <h3 class="driving__tab-header__item js-tab-trigger" data-tab="3">
+                                    Специализированное обучение
+                                    вождению спецтехникой</h3>
+                            </ul>
+                            <ul class="driving__tab-content">
+                                <li class="tab-content__item js-tab-content active" data-tab="1">
+                                    <div class="driving__tab-item-content">
+                                        <div class="driving__tab-item-intro">
+                                            <p>
+                                                Целью обучения является обеспечение понимания водителями опасностей и
+                                                потенциальных рисков
+                                                при перевозке пассажиров и грузов и, как следствие, уменьшение числа
+                                                ДТП, серьезности их последствий,
+                                                в том числе для передвижения по дорогам
+                                                общего пользования
+                                            </p>
+                                            <p><span>Количество дней на проведение обучения:</span>
+                                                − теоретическая часть 8 часов + практическая часть 1 час
+                                                на каждого обучаемого = 2 дня</p>
+                                            <div class="driving__tab-content-btn">
+                                                <a class="navbar__telbtn navbar__telget">Записаться на обучение</a>
+                                                <a class="outline__btn give__comment">Задать вопрос</a>
+                                            </div>
+                                        </div>
+                                        <div class="driving__tab-item-img">
+                                            <img src="./assets/img/Image.png" alt="img">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="tab-content__item js-tab-content" data-tab="2">
+                                    <div class="driving__tab-item-content">
+                                        <div class="driving__tab-item-intro">
+                                            <p>
+                                                Целью обучения является обеспечение понимания
+                                                водителями/машинистами опасностей в зимних условиях, в том числе для
+                                                передвижения по дорогам
+                                                общего пользования
+                                            </p>
+                                            <p><span>Количество дней на проведение обучения:</span>
+                                                − теоретическая часть 9 часов + практическая часть 7 часов
+                                                на группу = 2 дня</p>
+                                            <div class="driving__tab-content-btn">
+                                                <a class="navbar__telbtn navbar__telget">Записаться на обучение</a>
+                                                <a class="outline__btn give__comment">Задать вопрос</a>
+                                            </div>
+                                        </div>
+                                        <div class="driving__tab-item-img">
+                                            <img src="./assets/img/image2.png" alt="img">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="tab-content__item js-tab-content" data-tab="3">
+                                    <div class="driving__tab-item-content">
+                                        <div class="driving__tab-item-intro">
+                                            <p>
+                                                Целью обучения является обеспечение понимания водителями, управляющими
+                                                любым видом спецтехники вне зависимости
+                                                от
+                                                типа дорог, подъездных путей или местности, где используется подобная
+                                                техника.
+                                                И снизить потенциальные риски при перевозке людей и грузов и, как
+                                                следствие,
+                                                уменьшить число ДТП и серьезность их последствий
+                                            </p>
+                                            <p><span>Количество дней на проведение обучения:</span>
+                                                − теоретическая часть 16 часов + практическая часть 8 часов
+                                                на группу = 3 дня</p>
+                                            <div class="driving__tab-content-btn">
+                                                <a class="navbar__telbtn navbar__telget">Записаться на обучение</a>
+                                                <a class="outline__btn give__comment">Задать вопрос</a>
+                                            </div>
+                                        </div>
+                                        <div class="driving__tab-item-img">
+                                            <img src="./assets/img/image3.png" alt="img">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <div class="contact__content">
+                    <div class="contact__intro">
+                        <h1>Индивидуальный подход к каждому</h1>
+                        <p>Получите индивидуальное предложение на обучение
+                            в учебном центре “ПРОФИ”</p>
+                        <form action="#">
+                            <input class="input" type="text" placeholder="Ваш телефон" id="telephone" required>
+                            <button type="submit" class="getcontact">Получить</button>
+                            <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a
+                                    href="#">персональных данных</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="company">
+            <div class="container">
+                <div class="company__content">
+                    <div class="company__intro">
+                        <div class="title__item">
+                            <hr>
+                            <h1>О компании</h1>
+                        </div>
+                    </div>
+                    <div class="company__info">
+                        <div class="company__info-item">
+                            <img src="./assets/img/company/1.png" alt="company">
+                            <p>
+                                Учебный центр "Профи" берет свое начало в 2005 году.
+                                В 2017 году создана автономная некоммерческая организация дополнительного
+                                профессионального образования Учебный Центр "Профи"; Международная аккредитация ROSPA;
+                                Международного учебно-тренажерного центра
+                            </p>
+                        </div>
+                        <div class="company__info-item">
+                            <div class="company__info-intro">
+                                <p>
+                                    Учебный центр "Профи" предлагает широкий спектр уникальных дополнительных
+                                    образовательных программ для специалистов предприятий и организаций региона
+                                </p>
+                                <p>
+                                    В учебном центре "Профи" можно пройти курсы повышения квалификации или обучить
+                                    специалистов различных категорий.
+                                    Наши сотрудники окажут необходимую помощь при необходимости проведения следующих
+                                    типов
+                                    обучений:<br>
+                                    1. Получение полноценного дополнительного профессионального образования;<br>
+                                    2. Переподготовка сотрудников и ответственных лиц;<br>
+                                    3. Повышение квалификации персонала
+                                </p>
+                            </div>
+                            <img src="./assets/img/company/2.png" alt="company">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="certificate">
+            <div class="container">
+                <div class="certificate__content">
+                    <div class="certificate__intro">
+                        <div class="title__item">
+                            <hr>
+                            <h1>Получите официальный Сертификат для допуска на объекты ПАО «НК Роснефть»</h1>
+                        </div>
+                    </div>
+                    <div class="certificate__wrapper">
+                        <div class="certificate__info">
+                            <div class="certificate__info-item">
+                                <p class="bold__text">
+                                    Оставьте заявку на обучение защитному вождению
+                                </p>
+                                <p>
+                                    Мы оформим документы, направим счёт для оплаты,<br>
+                                    а также вышлем копии сертификатов
+                                </p>
+                            </div>
+                            <div class="certificate__form">
+                                <form action="#">
+                                    <input class="input" id="certificate__telephone" type="text"
+                                        placeholder="Ваш телефон" required>
+                                    <button type="submit" class="getcontact">Оставить заявку</button>
+                                    <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку <a
+                                            target="_blank"
+                                            href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">
+                                            персональных данных </a></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="certificate__img">
+                            <div class="certificate__img-item">
+                                <img src="./assets/img/certificate.png" alt="certificate">
+                            </div>
+                            <div class="certificate__img-info-item">
+                                <img src="./assets/img/icons/real.svg" alt="real">
+                                <p>
+                                    Сертификаты официальные, а навыки безопасного вождения — реальные. У вас не будет
+                                    проблем с допуском на объекты ПАО «НК Роснефть»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefit">
+            <div class="container">
+                <div class="benefit__content">
+                    <div class="benefit__intro">
+                        <div class="title__item">
+                            <hr>
+                            <h1>Ваши выгоды при обращении в УЦ “Профи”</h1>
+                        </div>
+                    </div>
+                    <div class="benefit__info">
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/1.svg" alt="1">
+                                <h1>Международная аккредитация ROSPA</h1>
+                            </div>
+                            <p>Курс проводят аттестованные ROSPA тренера, в удобном для Вас режиме</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/2.svg" alt="1">
+                                <h1>Доставка документов в руки по всей России</h1>
+                            </div>
+                            <p>Бесплатная доставка документов в любую точку РФ с гарантией получения</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/3.svg" alt="1">
+                                <h1>Индивидуальный подход</h1>
+                            </div>
+                            <p>Предлагаем индивидуальные условия на обучение</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/4.svg" alt="1">
+                                <h1>Государственная лицензия № 3005</h1>
+                            </div>
+                            <p>Наличие лицензии подтверждает наше право проводить обучение и выдавать документы об
+                                окончании обучения государственного образца</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/5.svg" alt="1">
+                                <h1>Ускоренное обучение от 72 часов</h1>
+                            </div>
+                            <p>Для получения ускоренного обучения по индивидуальному учебному плану сообщите об этом
+                                менеджеру при обращению в нашу компанию</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/6.svg" alt="1">
+                                <h1>Дистанционное и очное обучение</h1>
+                            </div>
+                            <p>Большинство наших программ имеют возможность очного и дистанционного формата. Выбирайте
+                                удобную для вас форму обучения</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/7.svg" alt="1">
+                                <h1>Помощь в трудоустройстве</h1>
+                            </div>
+                            <p>При необходимости, после завершения обучения отправляем персональные рекомендации с вашей
+                                вакансией работодателям, с которыми мы сотрудничаем на постоянной основе. В том числе
+                                крупным компаниям</p>
+                        </div>
+                        <div class="benefit__info-item">
+                            <div class="benefit__info-head">
+                                <img src="./assets/img/icons/benefit/8.svg" alt="1">
+                                <h1>Аккредитация крупных компаний</h1>
+                            </div>
+                            <p>Мы аккредитованы крупными компаниями, что говорит о достойном уровне и качестве нашего
+                                обучения</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="licenses">
+            <div class="container">
+                <div class="licenses__content">
+                    <div class="licenses__intro">
+                        <div class="title__item">
+                            <hr>
+                            <h1>Сертификаты и лицензии</h1>
+                        </div>
+                    </div>
+                    <div class="licenses__img-wrapper">
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/licenses/1.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/licenses/1.png">
+                            </a>
+                        </div>
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/licenses/2.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/licenses/2.png">
+                            </a>
+                        </div>
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/licenses/3.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/licenses/3.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__content">
+                    <div class="reviews__intro">
+                        <div class="title__item">
+                            <hr>
+                            <h1>Отзывы наших клиентов</h1>
+                        </div>
+                    </div>
+                    <div class="licenses__img-wrapper">
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/reviews/1.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/reviews/1.png">
+                            </a>
+                        </div>
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/reviews/2.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/reviews/2.png">
+                            </a>
+                        </div>
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/reviews/3.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/reviews/3.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="question">
+            <div class="container">
+                <div class="question__content">
+                    <div class="question__intro">
+                        <div class="title__item">
+                            <hr>
+                            <h1>Вопрос-ответ</h1>
+                        </div>
+                    </div>
+                    <div class="question__accordeon-wrapper" id="accordeon">
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Какие у Вашего учебного центра есть разрешительные документы?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Указывается ли форма обучения в удостоверении?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Будут ли действительны выдаваемые удостоверения в другом регионе РФ?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Почему необходимо указывать паспортные данные для заказчика – физ. лица?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Какие данные указываются в заявке?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Проводится ли очное обучение с выездом преподавателя в организацию?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Когда можно оплатить обучение?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Отправляете ли вы документы в электронном виде?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="question__accordeon-item">
+                            <div class="question__acc-head acc-head">
+                                <h1>Может ли заказчиком по договору выступать физическое лицо?</h1>
+                                <button class="question__acc-btn"><img src="./assets/img/icons/arrow.svg"
+                                        alt="arrow"></button>
+                            </div>
+                            <div class="question__acc-body acc-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
+                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
+                                    iste, voluptatem quasi debitis animi eum?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__intro title__item">
+                        <hr>
+                        <h1>Контакты</h1>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/tel.svg" alt="tel">
+                                <p>
+                                    +7 800 700 28 16
+                                </p>
+                            </div>
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/email.svg" alt="email">
+                                <p>
+                                    profi@dpoucprofi.com
+                                </p>
+                            </div>
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/gps.svg" alt="gps">
+                                <p>
+                                    г. Нефтеюганск, ул. Мира 8ст1
+                                </p>
+                            </div>
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/gps.svg" alt="gps">
+                                <p>
+                                    г. Пыть-Ях, микрорайон 2<br>
+                                    "Нефтяников", 27а
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/telegram.svg" alt="telegram">
+                                <a href="#">Мы в Telegram</a>
+                            </div>
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/whatsapp.svg" alt="whatsapp">
+                                <a href="#">Мы в Whatsapp</a>
+                            </div>
+                            <div class="footer__contact-tel">
+                                <img src="./assets/img/icons/viber.svg" alt="viber">
+                                <a href="#">Мы в Viber</a>
+                            </div>
+                        </div>
+                        <div class="footer__contact-item">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A00008720090ca9bf3e817db0f466c9d706a8a7ab7b36b41a7332afeb5c7063a7&amp;source=constructor"
+                                width="500" height="300" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./assets/js/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
