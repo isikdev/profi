@@ -1,9 +1,15 @@
+$(".menu__open").click(function(){
+    $(".menu").addClass("menu-active");
+})
+$(".close").click(function() {
+    $(".menu").removeClass("menu-active")
+})
 $('.licenses__img-wrapper').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    arrows: true,
-    dots: false,
+    arrows: false,
+    dots: true,
     responsive: [
         {
           breakpoint: 1080,
@@ -108,8 +114,3 @@ $(".getcontact").click(function(){
 })
 
 let sticky = new Sticky('.navbar__mb-wrapper');
-
-
-$(".burger").click(function() {
-    $(".menu").toggleClass("menu-active");
-})
