@@ -3,7 +3,7 @@ $('.licenses__img-wrapper').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: true,
-    dots: true,
+    dots: false,
     responsive: [
         {
           breakpoint: 1080,
@@ -11,14 +11,15 @@ $('.licenses__img-wrapper').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 736,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: false
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -104,4 +105,11 @@ $(".modal__success-close").click(function(){
 //успех
 $(".getcontact").click(function(){
     $(".modalbox__success").toggleClass("modalbox__success-active");
+})
+
+let sticky = new Sticky('.navbar__mb-wrapper');
+
+
+$(".burger").click(function() {
+    $(".menu").toggleClass("menu-active");
 })
