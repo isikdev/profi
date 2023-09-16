@@ -134,13 +134,13 @@
                 <div class="dn__navbar">
                     <nav>
                         <ul>
-                            <li><a href="#">Обучение</a></li>
-                            <li><a href="#">Сертификат</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Лицензии</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Вопрос-ответ</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#driving">Обучение</a></li>
+                            <li><a href="#certificate">Сертификат</a></li>
+                            <li><a href="#company">О компании</a></li>
+                            <li><a href="#licenses">Лицензии</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#question">Вопрос-ответ</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -183,13 +183,13 @@
                             <div class="dn__navbar">
                                 <nav>
                                     <ul>
-                                        <li><a href="#">Обучение</a></li>
-                                        <li><a href="#">Сертификат</a></li>
-                                        <li><a href="#">О компании</a></li>
-                                        <li><a href="#">Лицензии</a></li>
-                                        <li><a href="#">Отзывы</a></li>
-                                        <li><a href="#">Вопрос-ответ</a></li>
-                                        <li><a href="#">Контакты</a></li>
+                                        <li><a href="#driving">Обучение</a></li>
+                                        <li><a href="#certificate">Сертификат</a></li>
+                                        <li><a href="#company">О компании</a></li>
+                                        <li><a href="#licenses">Лицензии</a></li>
+                                        <li><a href="#reviews">Отзывы</a></li>
+                                        <li><a href="#question">Вопрос-ответ</a></li>
+                                        <li><a href="#contacts">Контакты</a></li>
                                     </ul>
                                 </nav>
                                 <button class="close burger"><img src="./assets/img/close.svg" alt="close"></button>
@@ -235,16 +235,14 @@
                         </div>
                     </div>
                     <div class="info__img">
-                        <img src="./assets/img/Photo.png" alt="photo">
-                        <div class="info__img-subtitle">
-                            <p>Генеральный директор УЦ Профи</p>
-                            <h1>Айрат Нуркаев</h1>
-                        </div>
+                        <img src="./assets/img/Photo.png" alt="photo__xl" class="photo__xl">
+                        <img src="./assets/img/Photo-sm.png" alt="photo__sm" class="photo__sm">
+                        <img src="./assets/img/Photo-mb.png" alt="photo__mb" class="photo__mb">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="driving">
+        <section class="driving" id="driving">
             <div class="container">
                 <div class="driving__content">
                     <div class="driving__intro title__item">
@@ -363,7 +361,7 @@
                 </div>
             </div>
         </section>
-        <section class="company">
+        <section class="company" id="company">
             <div class="container">
                 <div class="company__content">
                     <div class="company__intro">
@@ -405,7 +403,7 @@
                 </div>
             </div>
         </section>
-        <section class="certificate">
+        <section class="certificate" id="certificate">
             <div class="container">
                 <div class="certificate__content">
                     <div class="certificate__intro">
@@ -420,7 +418,7 @@
                                 <p class="bold__text">
                                     Оставьте заявку на обучение защитному вождению
                                 </p>
-                                <p>
+                                <p class="regular__text">
                                     Мы оформим документы, направим счёт для оплаты,<br>
                                     а также вышлем копии сертификатов
                                 </p>
@@ -529,7 +527,7 @@
                 </div>
             </div>
         </section>
-        <section class="licenses">
+        <section class="licenses" id="licenses">
             <div class="container">
                 <div class="licenses__content">
                     <div class="licenses__intro">
@@ -567,7 +565,7 @@
                 </div>
             </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="container">
                 <div class="reviews__content">
                     <div class="reviews__intro">
@@ -595,12 +593,18 @@
                                 <img src="./assets/img/reviews/3.png">
                             </a>
                         </div>
+                        <div class="licenses__img-item">
+                            <a data-fancybox="licenses" href="./assets/img/reviews/3.png"
+                                data-caption="Сертификаты и лицензии">
+                                <img src="./assets/img/reviews/3.png">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             </div>
         </section>
-        <section class="question">
+        <section class="question" id="question">
             <div class="container">
                 <div class="question__content">
                     <div class="question__intro">
@@ -618,9 +622,13 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Учебный центр «ПРОФИ» проводит обучение на основании образовательной лицензии №3005
+                                    от 15.10.2017 и в полном соответствии со всеми образовательными стандартами,
+                                    действующими на территории РФ.
+                                    <li>Свидетельство о государственной регистрации</li>
+                                    <li>Устав</li>
+                                    <li>Лист записи ЕГРЮЛ</li>
+                                    <li>Согласованная программа по охране труда</li>
                                 </p>
                             </div>
                         </div>
@@ -632,9 +640,10 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Нет, форма обучения (очная, заочная) указывается только в договоре на оказание
+                                    образовательных услуг. При заочном обучении с применением дистанционных
+                                    образовательных технологий вы получите точно такой же документ (удостоверение,
+                                    свидетельство), как и при очном обучении.
                                 </p>
                             </div>
                         </div>
@@ -646,9 +655,9 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Да, выдаваемые удостоверения действительны на всей территории РФ. Законодательно не
+                                    существует никаких ограничений по месту выдачи удостоверения. Вы вправе обучаться в
+                                    любом учебном заведении на территории всей страны.
                                 </p>
                             </div>
                         </div>
@@ -660,9 +669,11 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Образовательные услуги осуществляются на основании заключаемого договора между
+                                    Учебным центром и Заказчиком. Паспортные данные для Заказчика – физического лица
+                                    требуются для идентификации Заказчика при заключении Договора на оказание
+                                    образовательных услуг. Это обязательное условие, установленное Приказом Министерства
+                                    образования и науки РФ от 25 октября 2013 г. №1185.
                                 </p>
                             </div>
                         </div>
@@ -674,9 +685,17 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    В заявке обязательно указываются:
+                                    <li>контактные данные для связи с Вами (ФИО, E-mail, телефон);</li>
+                                    <li>сведения о заказчике (плательщике) для заключения договора (реквизиты
+                                        организации –
+                                        для юридического лица или ИП; ФИО и паспортные данные – для физического лица);
+                                    </li>
+                                    <li>информация об обучаемых (ФИО, должность, место работы);</li>
+                                    <li>сведения об образовании слушателей (для программ дополнительного
+                                        профессионального
+                                        образования);</li>
+                                    <li>выбранные программы обучения.</li>
                                 </p>
                             </div>
                         </div>
@@ -688,9 +707,10 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Да. Очное обучение проводится при наборе группы от 10 и более человек, в том числе с
+                                    выездом преподавателей Учебного центра к Заказчику. Итоговая стоимость очного
+                                    обучения формируется с учетом транспортных расходов и расходов на проживание
+                                    преподавательского состава.
                                 </p>
                             </div>
                         </div>
@@ -702,9 +722,8 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Обучение по конкретным реквизитам можно оплатить в любое время после оформления
+                                    заявки и получения счета: до, во время или после прохождения обучения.
                                 </p>
                             </div>
                         </div>
@@ -716,9 +735,11 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Да. После завершения нормативного срока обучения по выбранной программе, сдачи
+                                    экзамена и подтверждения оплаты Вам будут направлены скан-копии документов на Ваш
+                                    электронный адрес, указанный при регистрации. В электронном виде направляются:
+                                    удостоверение, протокол и акт выполненных работ. Документы отправляются в виде
+                                    zip-архива.
                                 </p>
                             </div>
                         </div>
@@ -730,9 +751,10 @@
                             </div>
                             <div class="question__acc-body acc-body">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsam incidunt quae
-                                    ratione nihil laborum! Sed optio omnis deserunt. In eligendi alias voluptates eaque
-                                    iste, voluptatem quasi debitis animi eum?
+                                    Да. Заказчиком образовательной услуги может выступать как Физическое лицо, так и
+                                    Юридическое лицо или Индивидуальный предприниматель. Данные о Заказчике обязательно
+                                    указываются при оформлении заявки на обучение. Сведения о Заказчике заносятся в
+                                    Договор на оказание образовательных услуг.
                                 </p>
                             </div>
                         </div>
@@ -741,7 +763,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="footer__wrapper">
             <div class="container">
                 <div class="footer__content">
@@ -791,7 +813,7 @@
                                 <a href="#">Мы в Viber</a>
                             </div>
                         </div>
-                        <div class="footer__contact-item">
+                        <div class="footer__contact-item footer__map">
                             <iframe
                                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A00008720090ca9bf3e817db0f466c9d706a8a7ab7b36b41a7332afeb5c7063a7&amp;source=constructor"
                                 width="500" height="300" frameborder="0"></iframe>

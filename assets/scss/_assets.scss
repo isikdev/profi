@@ -8,18 +8,25 @@
 .navbar__telbtn {
     padding: 15px 20px;
     text-decoration: none;
-    background-color: $burg;
+    background-color: #9B455B;
     border-radius: 8px;
     color: #fff;
     text-align: center;
     margin: 10px auto;
     font-size: 20px;
+    line-height: 30px;
     transition: all 0.3s ease;
     border: 0px none;
     outline: 0px none;
     cursor: pointer;
     &:hover {
-        opacity: 0.7;
+        background-color: #8D374D;
+    }
+    &:active {
+        background-color: #892D45;
+    }
+    &:focus {
+        background-color: #892D45;
     }
 }
 .outline__btn {
@@ -34,8 +41,14 @@
     transition: all 0.3s ease;
     cursor: pointer;
     &:hover {
-        background-color: $burg;
+        background-color: #8D374D;
         color: #fff;
+    }
+    &:active {
+        background-color: #892D45;
+    }
+    &:focus {
+        background-color: #892D45;
     }
 }
 .input {
@@ -62,10 +75,13 @@
         border-radius: 2px;
     }
     h1 {
-        font-size: 24px;
+        font-size: 36px;
         padding-left: 10px;
     }
 }
 .bold__text {
     font-weight: 600;
+}
+.regular__text {
+    font-weight: 400;
 }

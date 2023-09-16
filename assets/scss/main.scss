@@ -11,6 +11,9 @@ body {
     transition: all 0.3s ease;
     position: relative;
 }
+html {
+    scroll-behavior: smooth;
+}
 .container {
     max-width: 1220px;
     width: 100%;
@@ -66,10 +69,6 @@ body {
 .navbar__mb-telbtn {
     margin: 20px 0;
 }
-.navbar__mb-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
 .navbar__mobile {
     padding: 10px 0;
 }
@@ -101,7 +100,8 @@ body {
                     color: #000000;
                     transition: all 0.3s ease;
                     &:hover {
-                        opacity: 0.5;
+                        color: #9B455B;
+                        opacity: 1;
                     }
                 }
             }
@@ -263,7 +263,13 @@ body {
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover {
-                opacity: 0.7;
+                background-color: #DEBB00;
+            }
+            &:focus {
+                background-color: #BA9C00;
+            }
+            &:active {
+                background-color: #BA9C00;
             }
         }
         form {
@@ -333,7 +339,13 @@ body {
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover {
-                opacity: 0.7;
+                background-color: #8D374D;
+            }
+            &:active {
+                background-color: #892D45;
+            }
+            &:focus {
+                background-color: #892D45;
             }
         }
         form {
@@ -747,12 +759,22 @@ body {
 .navbar__mb-wrapper {
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 0;
+    z-index: 10000;
+    width: 100%;
+}
+.navbar__mb-wrapper-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .navbar__mobile {
     padding: 10px 0;
 }
 .navbar__mobile .info__subtitle {
     font-size: 16px;
+    font-weight: 400;
 }
 .navbar__burger button {
     background: transparent;
@@ -776,10 +798,11 @@ body {
                 a {
                     text-decoration: none;
                     font-size: 20px;
+                    font-weight: 400;
                     color: #000000;
-                    transition: all 0.3s ease;
+                    transition: all 0.1s ease;
                     &:hover {
-                        opacity: 0.5;
+                        color: #9B455B;
                     }
                 }
             }
@@ -797,7 +820,7 @@ body {
         padding: 50px 0;
         h1 {
             max-width: 57%;
-            font-size: 26px;
+            font-size: 36px;
             span {
                 font-weight: 600;
                 color: $burg;
@@ -807,7 +830,16 @@ body {
     &__img {
         position: relative;
         img {
-            margin-top: 50px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-height: 708px;
+        }
+        .photo__sm {
+            display: none;
+        }
+        .photo__mb {
+            display: none;
         }
     }
     &__intro-subtitle {
@@ -823,21 +855,7 @@ body {
         p {
             margin-left: 10px;
             font-size: 20px;
-        }
-    }
-    &__img-subtitle {
-        background-color: #fff;
-        padding: 10px 30px;
-        border-radius: 8px;
-        position: absolute;
-        top: 80%;
-        right: 0;
-        p {
-            font-size: 16px;
-        }
-        h1 {
-            font-size: 20px;
-            margin-top: 5px;
+            font-weight: 400;
         }
     }
 }
@@ -853,6 +871,7 @@ body {
         }
         h1 {
             font-size: 28px;
+            font-weight: 500;
             padding-left: 10px;
         }
     }
@@ -924,9 +943,11 @@ body {
         text-align: center;
         h1 {
             font-size: 48px;
+            font-weight: 600;
         }
         p {
-            font-size: 17px;
+            font-size: 24px;
+            font-weight: 600;
             margin: 24px 0;
         }
         button {
@@ -949,6 +970,7 @@ body {
             margin: 0 auto;
             .subtitle {
                 font-size: 14px;
+                font-weight: 400;
                 margin: 0;
                 text-align: left;
                 margin: 5px 13px;
@@ -961,6 +983,12 @@ body {
 }
 .company {
     padding: 50px 0;
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
     &__info-item {
         display: flex;
         justify-content: space-between;
@@ -969,6 +997,8 @@ body {
     }
     &__info-item {
         p {
+            font-size: 20px;
+            font-weight: 400;
             margin-right: 20px;
             margin-left: 20px;
             max-width: 500px;
@@ -992,6 +1022,12 @@ body {
     &__info-item {
         p {
             padding: 10px 0;
+        }
+    }
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
         }
     }
     &__form {
@@ -1043,6 +1079,8 @@ body {
         p {
             max-width: 450px;
             margin-left: 20px;
+            font-size: 14px;
+            font-weight: 400;
         }
     }
     &__wrapper {
@@ -1055,17 +1093,26 @@ body {
 }
 .benefit {
     padding: 50px 0;
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
     &__info-head {
         display: flex;
         align-items: center;
         h1 {
             font-size: 18px;
+            font-weight: 700;
             margin-left: 10px;
         }
     }
     &__info-item {
         p {
             margin-top: 10px;
+            font-size: 18px;
+            font-weight: 400;
         }
     }
     &__info {
@@ -1084,20 +1131,39 @@ body {
         justify-content: space-between;
         margin: 30px 0;
     }
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
     &__img-item {
         img {
             border-bottom: 4px solid #9b455b;
             border-right: 4px solid #9b455b;
+            border-radius: 6px;
             max-width: 350px;
         }
     }
 }
 .reviews {
     padding: 50px 0;
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
 }
 .question {
     padding: 50px 0;
     background-color: #f7f9fc;
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
     &__accordeon-item {
         background-color: #ffffff;
         padding: 10px 30px;
@@ -1111,8 +1177,10 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
         h1 {
             font-size: 20px;
+            font-weight: 600;
         }
     }
     &__acc-btn {
@@ -1138,6 +1206,12 @@ body {
 }
 .footer {
     padding: 50px 0;
+    &__intro {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
     &__contacts {
         display: flex;
         justify-content: space-between;
@@ -1154,7 +1228,8 @@ body {
         align-items: center;
         margin: 20px 0;
         p {
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 400;
             margin-left: 10px;
         }
         a {
@@ -1354,256 +1429,7 @@ body {
         font-size: 20px;
     }
 }
-@media screen and (max-width: 1080px) {
-    .navbar {
-        display: none;
-    }
-    .info__intro-btn {
-        display: flex;
-        flex-direction: column;
-        .navbar__telbtn {
-            margin: 0 0;
-        }
-        .outline__btn {
-            margin-left: 0;
-            text-align: center;
-            margin-top: 20px;
-        }
-    }
-    .info__intro h1 {
-        max-width: 100%;
-    }
-    .company__info-item {
-        flex-direction: column;
-        &:nth-child(2) {
-            flex-direction: column-reverse;
-        }
-    }
-    .company__info-item p {
-        max-width: 100%;
-        margin-top: 15px;
-    }
-    .certificate__wrapper {
-        flex-direction: column;
-    }
-    .certificate__info {
-        margin: 50px auto;
-    }
-    .certificate__img {
-        margin: 0 auto;
-    }
-    .benefit__info {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .licenses__img-item img {
-        margin: 0 auto;
-    }
-    .footer__contacts {
-        display: flex;
-        flex-shrink: 100%;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-    }
-}
-@media screen and (max-width: 752px) {
-    .info__content {
-        flex-direction: column;
-    }
-    .info__img {
-        margin: 0 auto;
-    }
-    .info__img-subtitle {
-        background-color: #fff;
-        padding: 10px 30px;
-        border-radius: 8px;
-        position: absolute;
-        /* top: 80%; */
-        right: 0;
-        bottom: 5%;
-        width: 100%;
-    }
-    .driving__tab-item-content {
-        flex-direction: column;
-    }
-    .driving__tab-head h3 {
-        margin: 10px auto;
-    }
-    .driving__tab-head {
-        flex-direction: column;
-    }
-    .driving__tab-content-btn {
-        display: flex;
-        flex-direction: column;
-    }
-    .driving__tab-content-btn .navbar__telbtn {
-        width: 100%;
-    }
-    .driving__tab-content-btn .outline__btn {
-        margin-left: 0;
-        text-align: center;
-    }
-    .driving__tab-item-img img {
-        margin: 0 auto;
-        width: 100%;
-    }
-    .contact__intro h1 {
-        font-size: 24px;
-    }
-    .benefit__info {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .certificate__img-item img {
-        max-width: 100%;
-    }
-    .company__info-item img {
-        max-width: 100%;
-    }
-    .footer__contact-item iframe {
-        max-width: 100%;
-    }
-    .navbar__prenavbar__mb-social {
-        display: flex;
-        flex-direction: column;
-    }
-    .navbar__prenavbar__mb-wrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .navbar__mobile-telbtn {
-        font-size: 16px;
-        width: 100%;
-        display: inherit;
-    }
-    .navbar__tel-item a {
-        font-size: 16px;
-    }
-    .navbar__logo a img {
-        max-width: 70%;
-    }
-    .navbar__social-img {
-        display: flex;
-    }
-}
-@media screen and (max-width: 500px) {
-    .container {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-    .info__img img {
-        max-width: 100%;
-    }
-    .info__intro h1 {
-        font-size: 16px;
-    }
-    .info__subtitle-item p {
-        font-size: 14px;
-    }
-    .navbar__telbtn {
-        font-size: 16px;
-    }
-    .outline__btn {
-        font-size: 16px;
-    }
-    .info__img-subtitle {
-        text-align: center;
-    }
-    .driving__intro h1 {
-        font-size: 20px;
-    }
-    .driving__tab-head h3 {
-        font-size: 16px;
-    }
-    .driving__tab-item-intro p {
-        font-size: 14px;
-    }
-    .driving__tab-item-intro p:nth-child(1) {
-        font-size: 14px;
-    }
-    .driving__tab-item-intro p:nth-child(2) {
-        font-size: 14px;
-    }
-    .contact__intro p {
-        font-size: 14px;
-    }
-    .contact__intro input {
-        width: 100%;
-    }
-    .contact__intro button {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .contact__intro form .subtitle {
-        text-align: center;
-    }
-    .title__item h1 {
-        font-size: 20px;
-    }
-    .company__info-item p {
-        margin-left: 0;
-        margin-right: 0;
-        font-size: 14px;
-    }
-    .title__item hr {
-        height: 70px;
-    }
-    .certificate__wrapper {
-        margin: 0 0;
-    }
-    .certificate__info-item p {
-        font-size: 16px;
-    }
-    .certificate__form form input {
-        width: 100%;
-    }
-    .certificate__form form button {
-        width: 100%;
-        margin: 10px auto;
-    }
-    .certificate__img-info-item p {
-        max-width: 100%;
-        font-size: 14px;
-    }
-    .benefit__info-head h1 {
-        font-size: 16px;
-    }
-    .benefit__info-item p {
-        font-size: 14px;
-    }
-    .question__acc-head h1 {
-        font-size: 16px;
-    }
-    .question__acc-body p {
-        font-size: 14px;
-    }
-    .footer__contact-tel p {
-        font-size: 16px;
-    }
-    .footer__contact-item {
-        padding: 0 0;
-    }
-    .licenses__img-item img {
-        max-width: 100%;
-        border-right: 0;
-        border-bottom: 0;
-    }
-    .modalbox__tel-content {
-        left: 0;
-        max-width: 100%;
-        padding: 20px;
-    }
-    .navbar__mobile .info__subtitle {
-        font-size: 14px;
-    }
-    .navbar__tel-item a {
-        font-size: 13px;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-    .navbar__social-img img {
-        margin: 3px;
-    }
-}
+
 .menu {
     min-height: 100vh;
     width: 100%;
@@ -1660,6 +1486,12 @@ body {
     .info__intro h1 {
         max-width: 100%;
     }
+    .info__img img {
+        display: none;
+    }
+    .navbar__prenavbar__mb-wrapper {
+        display: flex;
+    }
     .company__info-item {
         flex-direction: column;
         &:nth-child(2) {
@@ -1705,13 +1537,64 @@ body {
         margin-left: 0;
         text-align: center;
     }
+    .navbar__telbtn {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .outline__btn {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .driving__tab-head h3 {
+        font-size: 16px;
+    }
+    .driving__tab-item-intro p:nth-child(1) {
+        font-size: 16px;
+    }
+    .driving__tab-item-intro p:nth-child(2) {
+        font-size: 16px;
+    }
+    .contact__intro h1 {
+        font-size: 36px;
+    }
+    .contact__intro p {
+        font-size: 20px;
+    }
+    .certificate__info-item p {
+        font-size: 20px;
+    }
+    .certificate__img-info-item p {
+        font-size: 16px;
+    }
+    .question__acc-head h1 {
+        font-size: 16px;
+    }
+    .question__acc-body p {
+        font-size: 16px;
+    }
+    .footer__map {
+        width: 100%;
+        max-width: 100%;
+    }
+    .footer__map iframe {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 752px) {
+    .navbar__mobile .info__subtitle {
+        font-size: 14px;
+    }
     .info__content {
         flex-direction: column;
     }
+    .info__intro h1 {
+        font-size: 16px;
+    }
     .info__img {
         margin: 0 auto;
+    }
+    .info__subtitle-item p {
+        font-size: 14px;
     }
     .info__img-subtitle {
         background-color: #fff;
@@ -1722,6 +1605,16 @@ body {
         right: 0;
         bottom: 5%;
         width: 100%;
+    }
+    .driving__intro h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .driving__tab-item-intro p:nth-child(1) {
+        font-size: 14px;
+    }
+    .driving__tab-item-intro p:nth-child(2) {
+        font-size: 14px;
     }
     .driving__tab-item-content {
         flex-direction: column;
@@ -1750,6 +1643,12 @@ body {
     .contact__intro h1 {
         font-size: 24px;
     }
+    .contact__intro p {
+        font-size: 14px;
+    }
+    .contact__intro form .subtitle {
+        text-align: center;
+    }
     .benefit__info {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1757,6 +1656,29 @@ body {
         max-width: 100%;
     }
     .company__info-item img {
+        max-width: 100%;
+    }
+    .company__intro h1 {
+        font-size: 20px;
+    }
+    .company__info-item p {
+        font-size: 14px;
+        margin: 15px 0;
+    }
+    .certificate__intro h1 {
+        font-size: 20px;
+    }
+    .certificate__wrapper {
+        margin: 0 0;
+    }
+    .certificate__info {
+        margin: 50px 0;
+    }
+    .certificate__info-item p {
+        font-size: 16px;
+    }
+    .certificate__form form .subtitle {
+        margin: 5px auto;
         max-width: 100%;
     }
     .footer__contact-item iframe {
@@ -1788,6 +1710,9 @@ body {
     .modalbox__comment-content {
         left: 0;
         max-width: 100%;
+    }
+    .info__intro {
+        padding: 0 0;
     }
 }
 @media screen and (max-width: 500px) {
@@ -1843,6 +1768,7 @@ body {
     }
     .title__item h1 {
         font-size: 20px;
+        font-weight: 600;
     }
     .company__info-item p {
         margin-left: 0;
@@ -1871,6 +1797,7 @@ body {
     }
     .benefit__info-head h1 {
         font-size: 16px;
+        font-weight: 600;
     }
     .benefit__info-item p {
         font-size: 14px;
@@ -1883,6 +1810,11 @@ body {
     }
     .footer__contact-tel p {
         font-size: 16px;
+        font-weight: 400;
+    }
+    .footer__contact-tel a {
+        font-size: 16px;
+        font-weight: 400;
     }
     .footer__contact-item {
         padding: 0 0;

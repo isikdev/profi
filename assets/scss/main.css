@@ -16,13 +16,20 @@
   text-align: center;
   margin: 10px auto;
   font-size: 20px;
+  line-height: 30px;
   transition: all 0.3s ease;
   border: 0px none;
   outline: 0px none;
   cursor: pointer;
 }
 .navbar__telbtn:hover {
-  opacity: 0.7;
+  background-color: #8D374D;
+}
+.navbar__telbtn:active {
+  background-color: #892D45;
+}
+.navbar__telbtn:focus {
+  background-color: #892D45;
 }
 
 .outline__btn {
@@ -38,8 +45,14 @@
   cursor: pointer;
 }
 .outline__btn:hover {
-  background-color: #9B455B;
+  background-color: #8D374D;
   color: #fff;
+}
+.outline__btn:active {
+  background-color: #892D45;
+}
+.outline__btn:focus {
+  background-color: #892D45;
 }
 
 .input {
@@ -68,12 +81,16 @@
   border-radius: 2px;
 }
 .title__item h1 {
-  font-size: 24px;
+  font-size: 36px;
   padding-left: 10px;
 }
 
 .bold__text {
   font-weight: 600;
+}
+
+.regular__text {
+  font-weight: 400;
 }
 
 * {
@@ -86,6 +103,10 @@ body {
   font-family: "Inter", sans-serif;
   transition: all 0.3s ease;
   position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -143,11 +164,6 @@ body {
   margin: 20px 0;
 }
 
-.navbar__mb-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .navbar__mobile {
   padding: 10px 0;
 }
@@ -184,7 +200,8 @@ body {
   transition: all 0.3s ease;
 }
 .dn__navbar nav ul li a:hover {
-  opacity: 0.5;
+  color: #9B455B;
+  opacity: 1;
 }
 
 .info {
@@ -343,7 +360,13 @@ body {
   transition: all 0.3s ease;
 }
 .contact__intro button:hover {
-  opacity: 0.7;
+  background-color: #DEBB00;
+}
+.contact__intro button:focus {
+  background-color: #BA9C00;
+}
+.contact__intro button:active {
+  background-color: #BA9C00;
 }
 .contact__intro form {
   max-width: 400px;
@@ -407,7 +430,13 @@ body {
   transition: all 0.3s ease;
 }
 .certificate__form button:hover {
-  opacity: 0.7;
+  background-color: #8D374D;
+}
+.certificate__form button:active {
+  background-color: #892D45;
+}
+.certificate__form button:focus {
+  background-color: #892D45;
 }
 .certificate__form form {
   margin-left: 0;
@@ -755,13 +784,20 @@ body {
   text-align: center;
   margin: 10px auto;
   font-size: 20px;
+  line-height: 30px;
   transition: all 0.3s ease;
   border: 0px none;
   outline: 0px none;
   cursor: pointer;
 }
 .navbar__telbtn:hover {
-  opacity: 0.7;
+  background-color: #8D374D;
+}
+.navbar__telbtn:active {
+  background-color: #892D45;
+}
+.navbar__telbtn:focus {
+  background-color: #892D45;
 }
 
 .outline__btn {
@@ -777,8 +813,14 @@ body {
   cursor: pointer;
 }
 .outline__btn:hover {
-  background-color: #9B455B;
+  background-color: #8D374D;
   color: #fff;
+}
+.outline__btn:active {
+  background-color: #892D45;
+}
+.outline__btn:focus {
+  background-color: #892D45;
 }
 
 .input {
@@ -807,12 +849,16 @@ body {
   border-radius: 2px;
 }
 .title__item h1 {
-  font-size: 24px;
+  font-size: 36px;
   padding-left: 10px;
 }
 
 .bold__text {
   font-weight: 600;
+}
+
+.regular__text {
+  font-weight: 400;
 }
 
 * {
@@ -885,6 +931,16 @@ body {
 .navbar__mb-wrapper {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
+  padding: 20px 0;
+  z-index: 10000;
+  width: 100%;
+}
+
+.navbar__mb-wrapper-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .navbar__mobile {
@@ -893,6 +949,7 @@ body {
 
 .navbar__mobile .info__subtitle {
   font-size: 16px;
+  font-weight: 400;
 }
 
 .navbar__burger button {
@@ -919,11 +976,12 @@ body {
 .dn__navbar nav ul li a {
   text-decoration: none;
   font-size: 20px;
+  font-weight: 400;
   color: #000000;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 .dn__navbar nav ul li a:hover {
-  opacity: 0.5;
+  color: #9B455B;
 }
 
 .info {
@@ -939,7 +997,7 @@ body {
 }
 .info__intro h1 {
   max-width: 57%;
-  font-size: 26px;
+  font-size: 36px;
 }
 .info__intro h1 span {
   font-weight: 600;
@@ -949,7 +1007,16 @@ body {
   position: relative;
 }
 .info__img img {
-  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 708px;
+}
+.info__img .photo__sm {
+  display: none;
+}
+.info__img .photo__mb {
+  display: none;
 }
 .info__intro-subtitle {
   margin: 30px 0;
@@ -965,21 +1032,7 @@ body {
 .info__subtitle-item p {
   margin-left: 10px;
   font-size: 20px;
-}
-.info__img-subtitle {
-  background-color: #fff;
-  padding: 10px 30px;
-  border-radius: 8px;
-  position: absolute;
-  top: 80%;
-  right: 0;
-}
-.info__img-subtitle p {
-  font-size: 16px;
-}
-.info__img-subtitle h1 {
-  font-size: 20px;
-  margin-top: 5px;
+  font-weight: 400;
 }
 
 .driving {
@@ -996,6 +1049,7 @@ body {
 }
 .driving__intro h1 {
   font-size: 28px;
+  font-weight: 500;
   padding-left: 10px;
 }
 .driving__tabs {
@@ -1064,9 +1118,11 @@ body {
 }
 .contact__intro h1 {
   font-size: 48px;
+  font-weight: 600;
 }
 .contact__intro p {
-  font-size: 17px;
+  font-size: 24px;
+  font-weight: 600;
   margin: 24px 0;
 }
 .contact__intro button {
@@ -1090,6 +1146,7 @@ body {
 }
 .contact__intro form .subtitle {
   font-size: 14px;
+  font-weight: 400;
   margin: 0;
   text-align: left;
   margin: 5px 13px;
@@ -1101,6 +1158,10 @@ body {
 .company {
   padding: 50px 0;
 }
+.company__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
 .company__info-item {
   display: flex;
   justify-content: space-between;
@@ -1108,6 +1169,8 @@ body {
   margin: 40px 0;
 }
 .company__info-item p {
+  font-size: 20px;
+  font-weight: 400;
   margin-right: 20px;
   margin-left: 20px;
   max-width: 500px;
@@ -1128,6 +1191,10 @@ body {
 }
 .certificate__info-item p {
   padding: 10px 0;
+}
+.certificate__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
 }
 .certificate__form p {
   font-size: 17px;
@@ -1177,6 +1244,8 @@ body {
 .certificate__img-info-item p {
   max-width: 450px;
   margin-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
 }
 .certificate__wrapper {
   display: flex;
@@ -1189,16 +1258,23 @@ body {
 .benefit {
   padding: 50px 0;
 }
+.benefit__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
 .benefit__info-head {
   display: flex;
   align-items: center;
 }
 .benefit__info-head h1 {
   font-size: 18px;
+  font-weight: 700;
   margin-left: 10px;
 }
 .benefit__info-item p {
   margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
 }
 .benefit__info {
   display: grid;
@@ -1217,19 +1293,32 @@ body {
   justify-content: space-between;
   margin: 30px 0;
 }
+.licenses__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
 .licenses__img-item img {
   border-bottom: 4px solid #9b455b;
   border-right: 4px solid #9b455b;
+  border-radius: 6px;
   max-width: 350px;
 }
 
 .reviews {
   padding: 50px 0;
 }
+.reviews__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
 
 .question {
   padding: 50px 0;
   background-color: #f7f9fc;
+}
+.question__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
 }
 .question__accordeon-item {
   background-color: #ffffff;
@@ -1244,9 +1333,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .question__acc-head h1 {
   font-size: 20px;
+  font-weight: 600;
 }
 .question__acc-btn {
   background: transparent;
@@ -1270,6 +1361,10 @@ body {
 .footer {
   padding: 50px 0;
 }
+.footer__intro h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
 .footer__contacts {
   display: flex;
   justify-content: space-between;
@@ -1287,7 +1382,8 @@ body {
   margin: 20px 0;
 }
 .footer__contact-tel p {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 400;
   margin-left: 10px;
 }
 .footer__contact-tel a {
@@ -1478,256 +1574,6 @@ body {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1080px) {
-  .navbar {
-    display: none;
-  }
-  .info__intro-btn {
-    display: flex;
-    flex-direction: column;
-  }
-  .info__intro-btn .navbar__telbtn {
-    margin: 0 0;
-  }
-  .info__intro-btn .outline__btn {
-    margin-left: 0;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .info__intro h1 {
-    max-width: 100%;
-  }
-  .company__info-item {
-    flex-direction: column;
-  }
-  .company__info-item:nth-child(2) {
-    flex-direction: column-reverse;
-  }
-  .company__info-item p {
-    max-width: 100%;
-    margin-top: 15px;
-  }
-  .certificate__wrapper {
-    flex-direction: column;
-  }
-  .certificate__info {
-    margin: 50px auto;
-  }
-  .certificate__img {
-    margin: 0 auto;
-  }
-  .benefit__info {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .licenses__img-item img {
-    margin: 0 auto;
-  }
-  .footer__contacts {
-    display: flex;
-    flex-shrink: 100%;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 752px) {
-  .info__content {
-    flex-direction: column;
-  }
-  .info__img {
-    margin: 0 auto;
-  }
-  .info__img-subtitle {
-    background-color: #fff;
-    padding: 10px 30px;
-    border-radius: 8px;
-    position: absolute;
-    /* top: 80%; */
-    right: 0;
-    bottom: 5%;
-    width: 100%;
-  }
-  .driving__tab-item-content {
-    flex-direction: column;
-  }
-  .driving__tab-head h3 {
-    margin: 10px auto;
-  }
-  .driving__tab-head {
-    flex-direction: column;
-  }
-  .driving__tab-content-btn {
-    display: flex;
-    flex-direction: column;
-  }
-  .driving__tab-content-btn .navbar__telbtn {
-    width: 100%;
-  }
-  .driving__tab-content-btn .outline__btn {
-    margin-left: 0;
-    text-align: center;
-  }
-  .driving__tab-item-img img {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .contact__intro h1 {
-    font-size: 24px;
-  }
-  .benefit__info {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .certificate__img-item img {
-    max-width: 100%;
-  }
-  .company__info-item img {
-    max-width: 100%;
-  }
-  .footer__contact-item iframe {
-    max-width: 100%;
-  }
-  .navbar__prenavbar__mb-social {
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar__prenavbar__mb-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .navbar__mobile-telbtn {
-    font-size: 16px;
-    width: 100%;
-    display: inherit;
-  }
-  .navbar__tel-item a {
-    font-size: 16px;
-  }
-  .navbar__logo a img {
-    max-width: 70%;
-  }
-  .navbar__social-img {
-    display: flex;
-  }
-}
-@media screen and (max-width: 500px) {
-  .container {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  .info__img img {
-    max-width: 100%;
-  }
-  .info__intro h1 {
-    font-size: 16px;
-  }
-  .info__subtitle-item p {
-    font-size: 14px;
-  }
-  .navbar__telbtn {
-    font-size: 16px;
-  }
-  .outline__btn {
-    font-size: 16px;
-  }
-  .info__img-subtitle {
-    text-align: center;
-  }
-  .driving__intro h1 {
-    font-size: 20px;
-  }
-  .driving__tab-head h3 {
-    font-size: 16px;
-  }
-  .driving__tab-item-intro p {
-    font-size: 14px;
-  }
-  .driving__tab-item-intro p:nth-child(1) {
-    font-size: 14px;
-  }
-  .driving__tab-item-intro p:nth-child(2) {
-    font-size: 14px;
-  }
-  .contact__intro p {
-    font-size: 14px;
-  }
-  .contact__intro input {
-    width: 100%;
-  }
-  .contact__intro button {
-    width: 100%;
-    margin: 10px 0;
-  }
-  .contact__intro form .subtitle {
-    text-align: center;
-  }
-  .title__item h1 {
-    font-size: 20px;
-  }
-  .company__info-item p {
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 14px;
-  }
-  .title__item hr {
-    height: 70px;
-  }
-  .certificate__wrapper {
-    margin: 0 0;
-  }
-  .certificate__info-item p {
-    font-size: 16px;
-  }
-  .certificate__form form input {
-    width: 100%;
-  }
-  .certificate__form form button {
-    width: 100%;
-    margin: 10px auto;
-  }
-  .certificate__img-info-item p {
-    max-width: 100%;
-    font-size: 14px;
-  }
-  .benefit__info-head h1 {
-    font-size: 16px;
-  }
-  .benefit__info-item p {
-    font-size: 14px;
-  }
-  .question__acc-head h1 {
-    font-size: 16px;
-  }
-  .question__acc-body p {
-    font-size: 14px;
-  }
-  .footer__contact-tel p {
-    font-size: 16px;
-  }
-  .footer__contact-item {
-    padding: 0 0;
-  }
-  .licenses__img-item img {
-    max-width: 100%;
-    border-right: 0;
-    border-bottom: 0;
-  }
-  .modalbox__tel-content {
-    left: 0;
-    max-width: 100%;
-    padding: 20px;
-  }
-  .navbar__mobile .info__subtitle {
-    font-size: 14px;
-  }
-  .navbar__tel-item a {
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .navbar__social-img img {
-    margin: 3px;
-  }
-}
 .menu {
   min-height: 100vh;
   width: 100%;
@@ -1787,6 +1633,12 @@ body {
   .info__intro h1 {
     max-width: 100%;
   }
+  .info__img img {
+    display: none;
+  }
+  .navbar__prenavbar__mb-wrapper {
+    display: flex;
+  }
   .company__info-item {
     flex-direction: column;
   }
@@ -1832,13 +1684,64 @@ body {
     margin-left: 0;
     text-align: center;
   }
+  .navbar__telbtn {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .outline__btn {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .driving__tab-head h3 {
+    font-size: 16px;
+  }
+  .driving__tab-item-intro p:nth-child(1) {
+    font-size: 16px;
+  }
+  .driving__tab-item-intro p:nth-child(2) {
+    font-size: 16px;
+  }
+  .contact__intro h1 {
+    font-size: 36px;
+  }
+  .contact__intro p {
+    font-size: 20px;
+  }
+  .certificate__info-item p {
+    font-size: 20px;
+  }
+  .certificate__img-info-item p {
+    font-size: 16px;
+  }
+  .question__acc-head h1 {
+    font-size: 16px;
+  }
+  .question__acc-body p {
+    font-size: 16px;
+  }
+  .footer__map {
+    width: 100%;
+    max-width: 100%;
+  }
+  .footer__map iframe {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 752px) {
+  .navbar__mobile .info__subtitle {
+    font-size: 14px;
+  }
   .info__content {
     flex-direction: column;
   }
+  .info__intro h1 {
+    font-size: 16px;
+  }
   .info__img {
     margin: 0 auto;
+  }
+  .info__subtitle-item p {
+    font-size: 14px;
   }
   .info__img-subtitle {
     background-color: #fff;
@@ -1849,6 +1752,16 @@ body {
     right: 0;
     bottom: 5%;
     width: 100%;
+  }
+  .driving__intro h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .driving__tab-item-intro p:nth-child(1) {
+    font-size: 14px;
+  }
+  .driving__tab-item-intro p:nth-child(2) {
+    font-size: 14px;
   }
   .driving__tab-item-content {
     flex-direction: column;
@@ -1877,6 +1790,12 @@ body {
   .contact__intro h1 {
     font-size: 24px;
   }
+  .contact__intro p {
+    font-size: 14px;
+  }
+  .contact__intro form .subtitle {
+    text-align: center;
+  }
   .benefit__info {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1884,6 +1803,29 @@ body {
     max-width: 100%;
   }
   .company__info-item img {
+    max-width: 100%;
+  }
+  .company__intro h1 {
+    font-size: 20px;
+  }
+  .company__info-item p {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+  .certificate__intro h1 {
+    font-size: 20px;
+  }
+  .certificate__wrapper {
+    margin: 0 0;
+  }
+  .certificate__info {
+    margin: 50px 0;
+  }
+  .certificate__info-item p {
+    font-size: 16px;
+  }
+  .certificate__form form .subtitle {
+    margin: 5px auto;
     max-width: 100%;
   }
   .footer__contact-item iframe {
@@ -1915,6 +1857,9 @@ body {
   .modalbox__comment-content {
     left: 0;
     max-width: 100%;
+  }
+  .info__intro {
+    padding: 0 0;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1970,6 +1915,7 @@ body {
   }
   .title__item h1 {
     font-size: 20px;
+    font-weight: 600;
   }
   .company__info-item p {
     margin-left: 0;
@@ -1998,6 +1944,7 @@ body {
   }
   .benefit__info-head h1 {
     font-size: 16px;
+    font-weight: 600;
   }
   .benefit__info-item p {
     font-size: 14px;
@@ -2010,6 +1957,11 @@ body {
   }
   .footer__contact-tel p {
     font-size: 16px;
+    font-weight: 400;
+  }
+  .footer__contact-tel a {
+    font-size: 16px;
+    font-weight: 400;
   }
   .footer__contact-item {
     padding: 0 0;

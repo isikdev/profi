@@ -1,3 +1,23 @@
+$(function () {
+    let header = $('.navbar__mb-wrapper');
+    let hederHeight = header.height();
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            header.addClass('navbar__mb-wrapper-fixed');
+            $('body').css({
+                'paddingTop': hederHeight + 'px',
+                'transition': '.3s'
+            });
+        } else {
+            header.removeClass('navbar__mb-wrapper-fixed');
+            $('body').css({
+                'paddingTop': 0,
+                'transition': '.3s'
+            })
+        }
+    });
+});
 $(".menu__open").click(function () {
     $(".menu").addClass("menu-active");
 })
@@ -10,8 +30,8 @@ $('.licenses__img-wrapper').slick({
     slidesToScroll: 3,
     arrows: true,
     dots: true,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: "<img src='https://svgshare.com/i/xd1.svg' class='prev' alt='1'>",
+    nextArrow: "<img src='https://svgshare.com/i/xeG.svg' class='prev' alt='1'>",
     responsive: [
         {
             breakpoint: 1080,
@@ -114,5 +134,3 @@ $(".modal__success-close").click(function () {
 $(".getcontact").click(function () {
     $(".modalbox__success").toggleClass("modalbox__success-active");
 })
-
-let sticky = new Sticky('.navbar__mb-wrapper');
