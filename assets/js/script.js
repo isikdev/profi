@@ -1,37 +1,39 @@
-$(".menu__open").click(function(){
+$(".menu__open").click(function () {
     $(".menu").addClass("menu-active");
 })
-$(".close").click(function() {
+$(".close").click(function () {
     $(".menu").removeClass("menu-active")
 })
 $('.licenses__img-wrapper').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    arrows: false,
+    arrows: true,
     dots: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
     responsive: [
         {
-          breakpoint: 1080,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false
-          }
+            breakpoint: 1080,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: true,
+            }
         },
         {
-          breakpoint: 736,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false
-          }
+            breakpoint: 736,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+            }
         }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
-      ]
+    ]
 });
 
 $(document).ready(function () {
@@ -81,35 +83,35 @@ $(document).ready(function () {
 
 // modalbox tel
 // перезвоните мне 
-$(".navbar__telget, .modalboxtel__close").click(function() {
+$(".navbar__telget, .modalboxtel__close").click(function () {
     $(".modalbox__tel").toggleClass("modalbox__tel-active");
 })
 // успех
-$(".modalget__contact").click(function(){
+$(".modalget__contact").click(function () {
     $(".modalbox__tel").toggleClass("modalbox__tel-active");
     $(".modalbox__success").toggleClass("modalbox__success-active");
 })
 // закрытие успешно
-$(".modal__success-close").click(function(){
+$(".modal__success-close").click(function () {
     $(".modalbox__success").toggleClass("modalbox__success-active");
 })
 
 // modalbox comment
-$(".give__comment, .modalbox__close-btn").click(function(){
+$(".give__comment, .modalbox__close-btn").click(function () {
     $(".modalbox__comment").toggleClass("modalbox__comment-active");
 })
 // успех
-$(".modalget__comment").click(function(){
+$(".modalget__comment").click(function () {
     $(".modalbox__comment").toggleClass("modalbox__comment-active");
     $(".modalbox__success").toggleClass("modalbox__success-active");
 })
 // закрытие успешно
-$(".modal__success-close").click(function(){
+$(".modal__success-close").click(function () {
     $(".modalbox__success").removeClass("modalbox__success-active");
 })
 
 //успех
-$(".getcontact").click(function(){
+$(".getcontact").click(function () {
     $(".modalbox__success").toggleClass("modalbox__success-active");
 })
 
