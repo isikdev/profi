@@ -103,34 +103,40 @@ $(document).ready(function () {
 
 // modalbox tel
 // перезвоните мне 
-$(".navbar__telget, .modalboxtel__close").click(function () {
+$(".navbar__telget").click(function () {
     $(".modalbox__tel").toggleClass("modalbox__tel-active");
 })
 // успех
 $(".modalget__contact").click(function () {
     $(".modalbox__tel").toggleClass("modalbox__tel-active");
-    $(".modalbox__success").toggleClass("modalbox__success-active");
+    // $(".modalbox__success").toggleClass("modalbox__success-active");
+})
+$(".modalboxtel__close").click(function() {
+    $(".modalbox__tel").removeClass("modalbox__tel-active")
 })
 // закрытие успешно
 $(".modal__success-close").click(function () {
-    $(".modalbox__success").toggleClass("modalbox__success-active");
+    // $(".modalbox__success").toggleClass("modalbox__success-active");
 })
 
 // modalbox comment
-$(".give__comment, .modalbox__close-btn").click(function () {
+$(".give__comment").click(function () {
     $(".modalbox__comment").toggleClass("modalbox__comment-active");
+})
+$(".modalbox__comment-close").click(function() {
+    $(".modalbox__comment").removeClass("modalbox__comment-active")
 })
 // успех
 $(".modalget__comment").click(function () {
     $(".modalbox__comment").toggleClass("modalbox__comment-active");
-    $(".modalbox__success").toggleClass("modalbox__success-active");
+    // $(".modalbox__success").toggleClass("modalbox__success-active");
 })
 // закрытие успешно
 $(".modal__success-close").click(function () {
-    $(".modalbox__success").removeClass("modalbox__success-active");
+    // $(".modalbox__success").removeClass("modalbox__success-active");
 })
 
 //успех
 $(".getcontact").click(function () {
-    $(".modalbox__success").toggleClass("modalbox__success-active");
+    // $(".modalbox__success").toggleClass("modalbox__success-active");
 })

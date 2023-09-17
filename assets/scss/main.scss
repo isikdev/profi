@@ -100,7 +100,7 @@ html {
                     color: #000000;
                     transition: all 0.3s ease;
                     &:hover {
-                        color: #9B455B;
+                        color: #9b455b;
                         opacity: 1;
                     }
                 }
@@ -263,13 +263,13 @@ html {
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover {
-                background-color: #DEBB00;
+                background-color: #debb00;
             }
             &:focus {
-                background-color: #BA9C00;
+                background-color: #ba9c00;
             }
             &:active {
-                background-color: #BA9C00;
+                background-color: #ba9c00;
             }
         }
         form {
@@ -339,13 +339,13 @@ html {
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover {
-                background-color: #8D374D;
+                background-color: #8d374d;
             }
             &:active {
-                background-color: #892D45;
+                background-color: #892d45;
             }
             &:focus {
-                background-color: #892D45;
+                background-color: #892d45;
             }
         }
         form {
@@ -513,6 +513,11 @@ html {
         top: 0;
         transition: all 0.3s ease;
     }
+    form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
     &__success-active {
         left: 0;
     }
@@ -583,6 +588,11 @@ html {
         margin: 40px auto;
         display: flex;
         flex-direction: column;
+        form {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
         input {
             padding: 20px 20px;
             border-radius: 6px;
@@ -630,7 +640,7 @@ html {
         background-color: #ffffff;
         max-width: 800px;
         border-radius: 20px;
-        padding: 50px;
+        padding: 0px 50px;
         top: 18%;
         padding-top: 40px;
         left: 30%;
@@ -658,6 +668,11 @@ html {
         margin: 40px auto;
         display: flex;
         flex-direction: column;
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
         input {
             padding: 20px 20px;
             border-radius: 6px;
@@ -802,7 +817,7 @@ body {
                     color: #000000;
                     transition: all 0.1s ease;
                     &:hover {
-                        color: #9B455B;
+                        color: #9b455b;
                     }
                 }
             }
@@ -1367,16 +1382,16 @@ body {
     &__comment-wrapper {
         position: relative;
     }
-    &__comment-content {
-        background-color: #ffffff;
-        max-width: 800px;
-        border-radius: 20px;
-        padding: 50px;
-        top: 18%;
-        padding-top: 40px;
-        left: 30%;
-        position: absolute;
-    }
+    // &__comment-content {
+    //     background-color: #ffffff;
+    //     max-width: 800px;
+    //     border-radius: 20px;
+    //     padding: 0px 50px;
+    // top: 18%;
+    //     padding-top: 40px;
+    // left: 30%;
+    //     position: absolute;
+    // }
     &__close-btn {
         background: transparent;
         border: 0px none;

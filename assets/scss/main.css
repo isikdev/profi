@@ -200,7 +200,7 @@ html {
   transition: all 0.3s ease;
 }
 .dn__navbar nav ul li a:hover {
-  color: #9B455B;
+  color: #9b455b;
   opacity: 1;
 }
 
@@ -360,13 +360,13 @@ html {
   transition: all 0.3s ease;
 }
 .contact__intro button:hover {
-  background-color: #DEBB00;
+  background-color: #debb00;
 }
 .contact__intro button:focus {
-  background-color: #BA9C00;
+  background-color: #ba9c00;
 }
 .contact__intro button:active {
-  background-color: #BA9C00;
+  background-color: #ba9c00;
 }
 .contact__intro form {
   max-width: 400px;
@@ -430,13 +430,13 @@ html {
   transition: all 0.3s ease;
 }
 .certificate__form button:hover {
-  background-color: #8D374D;
+  background-color: #8d374d;
 }
 .certificate__form button:active {
-  background-color: #892D45;
+  background-color: #892d45;
 }
 .certificate__form button:focus {
-  background-color: #892D45;
+  background-color: #892d45;
 }
 .certificate__form form {
   margin-left: 0;
@@ -600,6 +600,11 @@ html {
   top: 0;
   transition: all 0.3s ease;
 }
+.modalbox form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 .modalbox__success-active {
   left: 0;
 }
@@ -668,6 +673,11 @@ html {
   display: flex;
   flex-direction: column;
 }
+.modalbox__tel-form form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 .modalbox__tel-form input {
   padding: 20px 20px;
   border-radius: 6px;
@@ -712,7 +722,7 @@ html {
   background-color: #ffffff;
   max-width: 800px;
   border-radius: 20px;
-  padding: 50px;
+  padding: 0px 50px;
   top: 18%;
   padding-top: 40px;
   left: 30%;
@@ -738,6 +748,11 @@ html {
   margin: 40px auto;
   display: flex;
   flex-direction: column;
+}
+.modalbox__comment-form form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 .modalbox__comment-form input {
   padding: 20px 20px;
@@ -981,7 +996,7 @@ body {
   transition: all 0.1s ease;
 }
 .dn__navbar nav ul li a:hover {
-  color: #9B455B;
+  color: #9b455b;
 }
 
 .info {
@@ -1513,16 +1528,6 @@ body {
 }
 .modalbox__comment-wrapper {
   position: relative;
-}
-.modalbox__comment-content {
-  background-color: #ffffff;
-  max-width: 800px;
-  border-radius: 20px;
-  padding: 50px;
-  top: 18%;
-  padding-top: 40px;
-  left: 30%;
-  position: absolute;
 }
 .modalbox__close-btn {
   background: transparent;

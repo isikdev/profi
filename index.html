@@ -79,12 +79,14 @@
                         <h1>Перезвоните мне</h1>
                     </div>
                     <div class="modalbox__tel-form">
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="tel" placeholder="Ваш телефон">
-                        <button type="submit" class="navbar__telbtn modalget__contact">Заказать звонок</button>
-                        <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a target="_blank"
-                                href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">персональных
-                                данных</a></p>
+                        <form action="./assets/mail.php" method="POST">
+                            <input type="text" placeholder="Ваше имя" name="user_name">
+                            <input type="tel" placeholder="Ваш телефон" name="user_phone">
+                            <button type="submit" class="navbar__telbtn modalget__contact">Заказать звонок</button>
+                            <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a target="_blank"
+                                    href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">персональных
+                                    данных</a></p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -101,14 +103,16 @@
                         <h1>Задать вопрос</h1>
                     </div>
                     <div class="modalbox__comment-form">
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="tel" placeholder="Ваш телефон">
-                        <textarea class="modalbox__comment-item" name="modalbox__comment" id="modalbox__comment"
-                            cols="10" rows="5" placeholder="Вопрос"></textarea>
-                        <button type="submit" class="navbar__telbtn modalget__comment">Заказать звонок</button>
-                        <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a target="_blank"
-                                href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">персональных
-                                данных</a></p>
+                        <form action="./assets/mail.php" method="POST">
+                            <input type="text" placeholder="Ваше имя" name="user_name">
+                            <input type="tel" placeholder="Ваш телефон" name="user_phone">
+                            <textarea class="modalbox__comment-item" name="modalbox__comment" id="modalbox__comment"
+                                cols="10" rows="5" placeholder="Вопрос"></textarea>
+                            <button type="submit" class="navbar__telbtn modalget__comment">Заказать звонок</button>
+                            <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a target="_blank"
+                                    href="https://avtoshkola-avtostatus72.ru/files/policy_20221115120418.pdf">персональных
+                                    данных</a></p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -362,8 +366,8 @@
                         <h1>Индивидуальный подход к каждому</h1>
                         <p>Получите индивидуальное предложение на обучение
                             в учебном центре “ПРОФИ”</p>
-                        <form action="#">
-                            <input class="input" type="text" placeholder="Ваш телефон" id="telephone" required>
+                        <form action="./assets/mail.php" method="POST">
+                            <input name="user_phone" class="input" type="text" placeholder="Ваш телефон" id="telephone" required>
                             <button type="submit" class="getcontact">Получить</button>
                             <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку<br> <a
                                     href="#">персональных данных</a></p>
@@ -435,9 +439,9 @@
                                 </p>
                             </div>
                             <div class="certificate__form">
-                                <form action="#">
+                                <form action="./assets/mail.php">
                                     <input class="input" id="certificate__telephone" type="text"
-                                        placeholder="Ваш телефон" required>
+                                        placeholder="Ваш телефон" name="user_phone" required>
                                     <button type="submit" class="getcontact">Оставить заявку</button>
                                     <p class="subtitle">Нажимая на кнопку, вы даете согласие на обработку <a
                                             target="_blank"
