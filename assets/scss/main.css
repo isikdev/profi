@@ -1020,8 +1020,9 @@ body {
 }
 .info__img {
   position: relative;
+  width: 50%;
 }
-.info__img img {
+.info__img .photo__xl {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1029,6 +1030,10 @@ body {
 }
 .info__img .photo__sm {
   display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 80%;
 }
 .info__img .photo__mb {
   display: none;
@@ -1635,6 +1640,15 @@ body {
     text-align: center;
     margin-top: 20px;
   }
+  .info__intro {
+    width: 50%;
+  }
+  .info__img {
+    margin: 0 auto;
+  }
+  .info__img .photo__sm {
+    display: block;
+  }
   .info__intro h1 {
     max-width: 100%;
   }
@@ -1736,14 +1750,8 @@ body {
   .navbar__mobile .info__subtitle {
     font-size: 14px;
   }
-  .info__content {
-    flex-direction: column;
-  }
   .info__intro h1 {
     font-size: 16px;
-  }
-  .info__img {
-    margin: 0 auto;
   }
   .info__subtitle-item p {
     font-size: 14px;
@@ -1880,6 +1888,26 @@ body {
   }
   .info__subtitle-item p {
     font-size: 14px;
+  }
+  .info__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .info__img {
+    width: 100%;
+  }
+  .info__img .photo__sm {
+    display: none;
+  }
+  .info__img .photo__mb {
+    display: block;
+    bottom: 0;
+    position: static;
+    height: 100%;
+    width: 100%;
+  }
+  .info__intro {
+    width: 100%;
   }
   .navbar__telbtn {
     font-size: 16px;
