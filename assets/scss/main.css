@@ -1880,6 +1880,9 @@ body {
     max-width: 100%;
     padding: 0 10px;
   }
+  .info {
+    background-image: url("../img/section_bg-mobile.png");
+  }
   .info__img img {
     max-width: 100%;
   }
